@@ -15,7 +15,7 @@ namespace Airpot_V2
     {
         Arrival = 1, Departure
     }
-    class Flight
+    class Flight : Units.IFlight
     {
         Random random = new Random();
         public DateTime Date { get; set; }

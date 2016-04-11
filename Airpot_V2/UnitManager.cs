@@ -394,5 +394,71 @@ Busyness = 2");
             return passangerArray;
 
         }
+        public static void EditPassanger(Passenger passanger)
+        {
+            Console.WriteLine(@"Enter parametr to change:
+1. Firstname
+2. Lastname
+3. Passport
+4. Birthday
+5. Nationality
+6. Sex");
+            int choose;
+            string enter;
+            bool parse = false;
+            parse = int.TryParse(Console.ReadLine(), out choose);
+            if (parse)
+            {
+                switch (choose)
+                {
+                    case 1:
+                        Console.WriteLine("Enter new firstname");
+                        enter = Console.ReadLine();
+                        passanger.FirstName = enter;
+                        break;
+                    case 2:
+                        Console.WriteLine("Enter new lastname");
+                        enter = Console.ReadLine();
+                        passanger.LastName = enter;
+                        break;
+                    case 3:
+                        Console.WriteLine("Enter new passport number");
+                        enter = Console.ReadLine();
+                        passanger.Passport = enter;
+                        break;
+                    case 4:
+                        Console.WriteLine("Enter new birthday (year, month, day)");
+                        Console.WriteLine("Year: ");
+                        int year;
+                        parse = int.TryParse(Console.ReadLine(), out year);
+                        Console.WriteLine("Month: ");
+                        int month;
+                        parse = int.TryParse(Console.ReadLine(), out month);
+                        Console.WriteLine("Day: ");
+                        int day;
+                        parse = int.TryParse(Console.ReadLine(), out day);
+                        passanger.Birthday = new DateTime(year, month, day);
+                        break;
+                    case 5:
+                        Console.WriteLine("Enter new nationality");
+                        enter = Console.ReadLine();
+                        passanger.Nationality = enter;
+                        break;
+                    case 6:
+                        Console.WriteLine(@"Enter new sex:
+Male = 1 , 
+Female = 2");
+                        parse = int.TryParse(Console.ReadLine(), out choose);
+                        if (parse && choose > 0 && choose < 3)
+                            passanger.Sex = (Passenger.sex)choose;
+                        break;                   
+                    default:
+                        Console.WriteLine("You entered wrong parametr");
+                        break;
+
+
+                }
+            }
+        }
     }
 }

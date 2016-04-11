@@ -8,5 +8,9 @@ namespace Airpot_V2.Units
 {
     interface IFlight
     {
+        DateTime Date { get; set; }
+        int FlightNumber { get; set; }       
+        string City { get; set; }
+        string Airline { get; set; }
     }
 }

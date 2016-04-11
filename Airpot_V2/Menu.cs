@@ -7,10 +7,11 @@ using System.Threading.Tasks;
 
 namespace Airpot_V2
 {
-   abstract class Menu
+    abstract class Menu
     {
         public static void Start()
         {
+            string enter;
             Console.SetWindowSize(120, 40);
             Flight[] flightarray = null;
             bool work = true, parsing;
@@ -148,12 +149,41 @@ namespace Airpot_V2
                                 {
                                     UnitManager.EditFlight(flightarray, i);
 
-                                   
+
                                 }
                             }
                         }
                         break;
                     case 8:
+
+                        Printer.FlightPrint(flightarray);
+                        Console.WriteLine("Select race by number");
+                        parsing = int.TryParse(Console.ReadLine(), out choose);
+                        if (parsing)
+                        {
+                            for (int i = 0; i < flightarray.Length; i++)
+                            {
+                                if (flightarray[i] != null && flightarray[i].FlightNumber == choose)
+                                {
+                                    Printer.PassangerPrint(flightarray[i].passangers);
+                                    Console.WriteLine("Enter passport number of passanger");
+                                    enter = Console.ReadLine();
+
+                                    for (int j = 0; j < flightarray[i].passangers.Length; j++)
+                                    {
+                                        if (flightarray[i].passangers[j] != null && flightarray[i].passangers[j].Passport == enter)
+                                        {
+                                            UnitManager.EditPassanger(flightarray[i].passangers[j]);
+                                        }
+                                        
+                                    }
+
+                                        
+
+                                    
+                                }
+                            }
+                        }
                         break;
                     case 9:
                         Console.WriteLine(@"Select search method
@@ -163,7 +193,7 @@ namespace Airpot_V2
 4. By passport");
                         parsing = int.TryParse(Console.ReadLine(), out choose);
                         if (parsing)
-                        {                            
+                        {
                             switch (choose)
                             {
                                 case 1:

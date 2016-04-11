@@ -14,8 +14,8 @@ namespace Airpot_V2
             Business = 1, Economy
         }
 
-        public TicketClass ticketClass;
-        public double price;
+        public TicketClass ticketClass { get; set; }
+        public double price { get; set; }
         public Ticket(double price, TicketClass ticketClass)
         {
             this.ticketClass = ticketClass;
