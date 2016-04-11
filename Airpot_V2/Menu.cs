@@ -137,6 +137,21 @@ namespace Airpot_V2
                         }
                         break;
                     case 7:
+                        Printer.FlightPrint(flightarray);
+                        Console.WriteLine("Select race by number");
+                        parsing = int.TryParse(Console.ReadLine(), out choose);
+                        if (parsing)
+                        {
+                            for (int i = 0; i < flightarray.Length; i++)
+                            {
+                                if (flightarray[i] != null && flightarray[i].FlightNumber == choose)
+                                {
+                                    UnitManager.EditFlight(flightarray, i);
+
+                                   
+                                }
+                            }
+                        }
                         break;
                     case 8:
                         break;

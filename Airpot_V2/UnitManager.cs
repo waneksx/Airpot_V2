@@ -145,6 +145,136 @@ Departure = 2");
 
 
         }
+
+        public static void EditFlight(Flight[] flightarray, int count)
+        {
+            Console.WriteLine(@"Enter parametr to change:
+1. Flight number(it will unique number)
+2. Date
+3. Gate
+4. Terminal
+5. City
+6. Airline
+7. Status
+8. State");
+            int choose;
+            bool parse = false, unique = true;
+            parse = int.TryParse(Console.ReadLine(), out choose);
+            if (parse)
+            {
+                switch (choose)
+                {
+                    case 1:
+                        Console.WriteLine("Enter new flight number");
+                        parse = int.TryParse(Console.ReadLine(), out choose);
+                        if (parse)
+                        {
+
+
+                            for (int i = 0; i < flightarray.Length; i++)
+                            {
+                                if (flightarray[i] != null && flightarray[i].FlightNumber == choose)
+                                {
+                                    unique = false;
+                                }
+                            }
+                            if (unique)
+                            {
+                                flightarray[count].FlightNumber = choose;
+                            }
+                        }
+                        break;
+                    case 2:
+                        Console.WriteLine("Enter new date (year, month, day, hour, minute)");
+                        Console.WriteLine("Year: ");
+                        int year;
+                        parse = int.TryParse(Console.ReadLine(), out year);
+                        Console.WriteLine("Month: ");
+                        int month;
+                        parse = int.TryParse(Console.ReadLine(), out month);
+                        Console.WriteLine("Day: ");
+                        int day;
+                        parse = int.TryParse(Console.ReadLine(), out day);
+                        Console.WriteLine("Hour: ");
+                        int hour;
+                        parse = int.TryParse(Console.ReadLine(), out hour);
+                        Console.WriteLine("Minute: ");
+                        int minute;
+                        parse = int.TryParse(Console.ReadLine(), out minute);
+                        flightarray[count].Date = new DateTime(year, month, day, hour, minute, 0);
+                        break;
+                    case 3:
+                        Console.WriteLine("Enter new gate");
+                        parse = int.TryParse(Console.ReadLine(), out choose);
+                        if (parse)
+                        {
+                            flightarray[count].Gate = choose;
+                        }
+
+                        break;
+                    case 4:
+                        Console.WriteLine("Enter new terminal number");
+                        parse = int.TryParse(Console.ReadLine(), out choose);
+                        if (parse)
+                        {
+                            flightarray[count].Terminal = choose;
+                        }
+
+                        break;
+                    case 5:
+                        Console.WriteLine("Enter new city");
+                        string city;
+                        city = Console.ReadLine();
+
+                        flightarray[count].City = city;
+
+
+                        break;
+                    case 6:
+                        Console.WriteLine("Enter new airline");
+                        string airline;
+                        airline = Console.ReadLine();
+
+                        flightarray[count].Airline = airline;
+                        break;
+
+                    case 7:
+                        Console.WriteLine(@"Enter new status:
+check-in = 1 , 
+gate closed = 2, 
+arrived = 3, 
+departed at = 4 ,
+unknown = 5, 
+canceled = 6,
+expected at = 7, 
+delayed = 8, 
+in flight = 9");
+
+                        parse = int.TryParse(Console.ReadLine(), out choose);
+                        if (parse && choose > 0 && choose < 10)
+                            flightarray[count].Status = (Status)choose;
+                        break;
+
+
+                    case 8:
+                        Console.WriteLine(@"Select new direction:
+Arrival = 1
+Departure = 2");
+                        parse = int.TryParse(Console.ReadLine(), out choose);
+                        if (parse && choose > 0 && choose < 3)
+                            flightarray[count].State = (Direction)choose;
+                        break;
+
+                    default:
+                        Console.WriteLine("You entered wrong number!");
+                        break;
+                }
+            }
+            Console.WriteLine("Press any key");
+            Console.ReadKey();
+
+        }
+
         public static Passenger[] AddPassanger(Passenger[] passangers, Passenger passanger)
         {
             for (int i = 0; i < passangers.Length; i++)
@@ -235,14 +365,14 @@ Busyness = 2");
                 for (int i = 0; i < flightarray.Length; i++)
                 {
                     if (flightarray[i] != null && flightarray[i].FlightNumber == choose)
-                {
-                    flightarray[i] = null;
-                }               
-            }
-            } while (isParsed==false);
+                    {
+                        flightarray[i] = null;
+                    }
+                }
+            } while (isParsed == false);
             return flightarray;
         }
-        public static Passenger [] DeletePassanger(Passenger [] passangerArray)
+        public static Passenger[] DeletePassanger(Passenger[] passangerArray)
         {
             string pass;
             bool success = false;
