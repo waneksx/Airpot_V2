@@ -20,7 +20,7 @@ namespace Airpot_V2
             FlightArray[0].passangers[3] = new Passenger("Antony", "Zubrovski", "Polish", "ZL214512", new DateTime(1996, 8, 6), Passenger.sex.Male, 149.99, Ticket.TicketClass.Economy);
 
 
-            FlightArray[1] = new Flight() { Airline = "", City = "", Date = new DateTime(2016, 4, 12, 02, 20, 00), FlightNumber = 216, Gate = 1, State = Direction.Arrival, Status = Status.arrived, Terminal = 3 };
+            FlightArray[1] = new Flight() { Airline = "Qatar", City = "Moskow", Date = new DateTime(2016, 4, 12, 02, 20, 00), FlightNumber = 216, Gate = 2, State = Direction.Departure, Status = Status.checkIn, Terminal = 3 };
 
             FlightArray[1].passangers[0] = new Passenger("John", "Brown", "English", "2114156", new DateTime(1985, 11, 15), Passenger.sex.Male, 129.99, Ticket.TicketClass.Economy);
             FlightArray[1].passangers[1] = new Passenger("Ivan", "Sakharchuk", "Austrian", "2114156", new DateTime(1971, 2, 3), Passenger.sex.Male, 99.99, Ticket.TicketClass.Economy);
@@ -28,7 +28,7 @@ namespace Airpot_V2
             FlightArray[1].passangers[3] = new Passenger("Mario", "Carleone", "Italian", "2114156", new DateTime(1976, 8, 22), Passenger.sex.Male, 169.99, Ticket.TicketClass.Economy);
 
 
-            FlightArray[2] = new Flight() { Airline = "", City = "", Date = new DateTime(2016, 2, 11, 19, 3, 00), FlightNumber = 185, Gate = 1, State = Direction.Arrival, Status = Status.arrived, Terminal = 2 };
+            FlightArray[2] = new Flight() { Airline = "UralAirlines", City = "Penza", Date = new DateTime(2016, 3, 14, 19, 3, 00), FlightNumber = 185, Gate = 1, State = Direction.Arrival, Status = Status.arrived, Terminal = 2 };
 
             FlightArray[2].passangers[0] = new Passenger("Ivan", "Sakharchuk", "Ukrainian", "2114156", new DateTime(1996, 8, 6), Passenger.sex.Male, 149.99, Ticket.TicketClass.Economy);
             FlightArray[2].passangers[1] = new Passenger("Ivan", "Sakharchuk", "Ukrainian", "2114156", new DateTime(1996, 8, 6), Passenger.sex.Male, 149.99, Ticket.TicketClass.Economy);

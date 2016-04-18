@@ -20,8 +20,10 @@ namespace Airpot_V2
             do
             {
                 Console.Clear();
-                Console.WriteLine(@"Enter number of action:
-1. Print flights
+                Console.ForegroundColor = ConsoleColor.Cyan;
+                Console.WriteLine(@"Enter number of action:");
+                Console.ResetColor();
+                Console.WriteLine(@"1. Print flights
 2. Print passangers
 3. Add flight
 4. Add passanger (by flight number)
@@ -89,25 +91,18 @@ namespace Airpot_V2
                         {
                             for (int i = 0; i < flightarray.Length; i++)
                             {
-                                if (flightarray[i] != null)
+                                if (flightarray[i] != null && flightarray[i].FlightNumber == choose)
                                 {
-                                    if (flightarray[i].FlightNumber == choose)
-                                    {
-                                        do
-                                        {
-                                            passanger = UnitManager.CreatePassanger();
-                                        }
-                                        while (passanger == null);
-                                        UnitManager.AddPassanger(flightarray[i].passangers, passanger);
-                                        Console.WriteLine("Press Any key to continue");
-                                        Console.ReadKey();
-                                    }
-                                    else
-                                    {
-                                        Console.WriteLine("There is not this flight");
-                                        break;
-                                    }
+
+                                    
+                                        passanger = UnitManager.CreatePassanger();
+                                   
+                                    UnitManager.AddPassanger(flightarray[i].passangers, passanger);
+                                    Console.WriteLine("Press Any key to continue");
+                                    Console.ReadKey();
                                 }
+                                
+
                             }
                         }
 
@@ -175,12 +170,12 @@ namespace Airpot_V2
                                         {
                                             UnitManager.EditPassanger(flightarray[i].passangers[j]);
                                         }
-                                        
+
                                     }
 
-                                        
 
-                                    
+
+
                                 }
                             }
                         }
