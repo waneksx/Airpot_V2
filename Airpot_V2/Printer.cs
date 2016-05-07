@@ -11,9 +11,9 @@ namespace Airpot_V2
         public static void FlightPrint (Flight [] flightArray)
         {
             Console.ForegroundColor = ConsoleColor.Cyan;
-            Console.WriteLine("------------------------------------------------------------------------------------ ");
-            Console.WriteLine(" №   State   Time             City     Airline   Terminal  Status    Gate Passangers ");
-            Console.WriteLine("------------------------------------------------------------------------------------ ");
+            Console.WriteLine("---------------------------------------------------------------------------------------- ");
+            Console.WriteLine(" №   State       Time             City     Airline   Terminal  Status    Gate Passangers ");
+            Console.WriteLine("---------------------------------------------------------------------------------------- ");
             Console.ResetColor();
             for (int i = 0; i < flightArray.Length; i++)
             {

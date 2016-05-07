@@ -58,7 +58,7 @@ namespace Airpot_V2
         public override string ToString()
         {
 
-            string s = String.Format("{0,-4} {1,-6} {2,-16} {3,-8} {4,-9} {5, -9} {6, -10} {7, -3} {8, -2}", FlightNumber, State, Date.ToString("dd.MM.yyyy HH:mm"), City, Airline, Terminal, Status, Gate, Flight.GetPassangersQuantity(passangers));
+            string s = String.Format("{0,-4} {1,-10} {2,-16} {3,-8} {4,-9} {5, -9} {6, -10} {7, -3} {8, -2}", FlightNumber, State, Date.ToString("dd.MM.yyyy HH:mm"), City, Airline, Terminal, Status, Gate, Flight.GetPassangersQuantity(passangers));
             return s;
         }
         public static int GetPassangersQuantity(Passenger[] passangers)
