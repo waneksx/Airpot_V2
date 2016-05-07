@@ -14,31 +14,48 @@ namespace Airpot_V2
             #region StartInitialization
             FlightArray[0] = new Flight() { Airline = "MAU", City = "Kiev", Date = new DateTime(2016, 3, 24, 12, 45, 00), FlightNumber = 114, Gate = 1, State = Direction.Arrival, Status = Status.arrived, Terminal = 2 };
 
-            FlightArray[0].passangers[0] = new Passenger("Ivan", "Sakharchuk", "Ukrainian", "2114156", new DateTime(1996, 8, 6), Passenger.sex.Male, 300.00, Ticket.TicketClass.Economy);
+            FlightArray[0].passangers[0] = new Passenger("Peter", "Sanders", "Ukrainian", "2114156", new DateTime(1996, 8, 6), Passenger.sex.Male, 300.00, Ticket.TicketClass.Economy);
             FlightArray[0].passangers[1] = new Passenger("Mike", "Zubrovski", "Polish", "WN235177", new DateTime(1987, 12, 31), Passenger.sex.Male, 269.99, Ticket.TicketClass.Business);
             FlightArray[0].passangers[2] = new Passenger("Elzbeth", "Zubrovski", "Ukrainian", "FG390089", new DateTime(1995, 1, 7), Passenger.sex.Female, 279.99, Ticket.TicketClass.Business);
             FlightArray[0].passangers[3] = new Passenger("Antony", "Zubrovski", "Polish", "ZL214512", new DateTime(1996, 8, 6), Passenger.sex.Male, 149.99, Ticket.TicketClass.Economy);
+            FlightArray[0].passangers[4] = new Passenger("Jeremiah", "Gray", "English", "KM5XWL3", new DateTime(1985, 6, 21), Passenger.sex.Male, 329.99, Ticket.TicketClass.Business);
+
 
 
             FlightArray[1] = new Flight() { Airline = "Qatar", City = "Moskow", Date = new DateTime(2016, 4, 12, 02, 20, 00), FlightNumber = 216, Gate = 2, State = Direction.Departure, Status = Status.checkIn, Terminal = 3 };
 
-            FlightArray[1].passangers[0] = new Passenger("John", "Brown", "English", "2114156", new DateTime(1985, 11, 15), Passenger.sex.Male, 129.99, Ticket.TicketClass.Economy);
-            FlightArray[1].passangers[1] = new Passenger("Ivan", "Sakharchuk", "Austrian", "2114156", new DateTime(1971, 2, 3), Passenger.sex.Male, 99.99, Ticket.TicketClass.Economy);
-            FlightArray[1].passangers[2] = new Passenger("Roberto", "Tomason", "Brazilian", "2114156", new DateTime(1961, 6, 5), Passenger.sex.Male, 199.99, Ticket.TicketClass.Economy);
-            FlightArray[1].passangers[3] = new Passenger("Mario", "Carleone", "Italian", "2114156", new DateTime(1976, 8, 22), Passenger.sex.Male, 169.99, Ticket.TicketClass.Economy);
+            FlightArray[1].passangers[0] = new Passenger("John", "Brown", "English", "HKO4MWJ", new DateTime(1985, 11, 15), Passenger.sex.Male, 129.99, Ticket.TicketClass.Economy);
+            FlightArray[1].passangers[1] = new Passenger("Ivan", "Sakharchuk", "Austrian", "HKO4MWJ", new DateTime(1971, 2, 3), Passenger.sex.Male, 99.99, Ticket.TicketClass.Economy);
+            FlightArray[1].passangers[2] = new Passenger("Roberto", "Tomason", "Brazilian", "JA5VTZT", new DateTime(1961, 6, 5), Passenger.sex.Male, 199.99, Ticket.TicketClass.Economy);
+            FlightArray[1].passangers[3] = new Passenger("Mario", "Carleone", "Italian", "PX3ZF8U", new DateTime(1976, 8, 22), Passenger.sex.Male, 169.99, Ticket.TicketClass.Economy);
 
 
-            FlightArray[2] = new Flight() { Airline = "UralAirlines", City = "Penza", Date = new DateTime(2016, 3, 14, 19, 3, 00), FlightNumber = 185, Gate = 1, State = Direction.Arrival, Status = Status.arrived, Terminal = 2 };
+            FlightArray[2] = new Flight() { Airline = "UralAir", City = "Penza", Date = new DateTime(2016, 3, 14, 19, 3, 00), FlightNumber = 185, Gate = 3, State = Direction.Arrival, Status = Status.arrived, Terminal = 2 };
 
-            FlightArray[2].passangers[0] = new Passenger("Ivan", "Sakharchuk", "Ukrainian", "2114156", new DateTime(1996, 8, 6), Passenger.sex.Male, 149.99, Ticket.TicketClass.Economy);
-            FlightArray[2].passangers[1] = new Passenger("Ivan", "Sakharchuk", "Ukrainian", "2114156", new DateTime(1996, 8, 6), Passenger.sex.Male, 149.99, Ticket.TicketClass.Economy);
-            FlightArray[2].passangers[2] = new Passenger("Ivan", "Sakharchuk", "Ukrainian", "2114156", new DateTime(1996, 8, 6), Passenger.sex.Male, 149.99, Ticket.TicketClass.Economy);
-            FlightArray[2].passangers[3] = new Passenger("Ivan", "Sakharchuk", "Ukrainian", "2114156", new DateTime(1996, 8, 6), Passenger.sex.Male, 149.99, Ticket.TicketClass.Economy);
+            FlightArray[2].passangers[0] = new Passenger("Peter", "Wilson", "English", "RZ06V8S", new DateTime(1976, 12, 15), Passenger.sex.Male, 349.99, Ticket.TicketClass.Economy);
+            FlightArray[2].passangers[1] = new Passenger("Ivan", "Bailey", "Ukrainian", "UOTRSRG", new DateTime(1956, 10, 9), Passenger.sex.Male, 359.99, Ticket.TicketClass.Business);
+            FlightArray[2].passangers[2] = new Passenger("Amber", "Cooper", "English", "3LLUHS1", new DateTime(1979, 4, 4), Passenger.sex.Female, 339.99, Ticket.TicketClass.Economy);
 
 
-            FlightArray[3] = new Flight() { Airline = "", City = "", Date = new DateTime(2016, 3, 28, 2, 15, 00), FlightNumber = 115, Gate = 1, State = Direction.Arrival, Status = Status.canceled, Terminal = 1 };
-            FlightArray[4] = new Flight() { Airline = "", City = "", Date = new DateTime(2016, 2, 24, 14, 00, 00), FlightNumber = 642, Gate = 1, State = Direction.Arrival, Status = Status.arrived, Terminal = 1 };
-            FlightArray[5] = new Flight() { Airline = "", City = "", Date = new DateTime(2016, 4, 7, 23, 36, 00), FlightNumber = 434, Gate = 1, State = Direction.Arrival, Status = Status.arrived, Terminal = 1 };
+            FlightArray[3] = new Flight() { Airline = "Spirit", City = "London", Date = new DateTime(2016, 3, 28, 2, 15, 00), FlightNumber = 115, Gate = 2, State = Direction.Departure, Status = Status.canceled, Terminal = 3 };
+
+            FlightArray[3].passangers[0] = new Passenger("Peter", "Wilson", "English", "HKO4MWJ", new DateTime(1976, 12, 15), Passenger.sex.Male, 949.99, Ticket.TicketClass.Economy);
+            FlightArray[3].passangers[1] = new Passenger("Allison", "Bailey", "English", "ZMD6XSD", new DateTime(1956, 10, 9), Passenger.sex.Female, 959.99, Ticket.TicketClass.Business);
+            FlightArray[3].passangers[2] = new Passenger("Madeline", "Cooper", "English", "E9W9VI1", new DateTime(1979, 4, 4), Passenger.sex.Female, 939.99, Ticket.TicketClass.Economy);
+            FlightArray[3].passangers[3] = new Passenger("Victoria", "Gray", "English", "ID40F6Z", new DateTime(1985, 6, 21), Passenger.sex.Male, 929.99, Ticket.TicketClass.Business);
+
+
+            FlightArray[4] = new Flight() { Airline = "SAS", City = "Chicago", Date = new DateTime(2016, 2, 24, 14, 00, 00), FlightNumber = 642, Gate = 1, State = Direction.Arrival, Status = Status.expectedAt, Terminal = 2 };
+
+            FlightArray[4].passangers[0] = new Passenger("Peter", "Cox", "English", "C5EWPZU", new DateTime(1976, 12, 15), Passenger.sex.Male, 609.99, Ticket.TicketClass.Economy);
+            FlightArray[4].passangers[1] = new Passenger("Sarah", "Ramirez", "English", "XC7QRZ2", new DateTime(1956, 10, 9), Passenger.sex.Female, 529.99, Ticket.TicketClass.Business);
+            
+
+
+            FlightArray[5] = new Flight() { Airline = "KLM", City = "New York", Date = new DateTime(2016, 4, 7, 23, 36, 00), FlightNumber = 434, Gate = 3, State = Direction.Arrival, Status = Status.unknown, Terminal = 1 };
+
+            FlightArray[5].passangers[0] = new Passenger("Joshua", "Price", "English", "UUX459H", new DateTime(1976, 12, 15), Passenger.sex.Male, 779.99, Ticket.TicketClass.Business);
+            
 
 
 
